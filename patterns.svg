@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+  <defs>
+    <linearGradient id="waveFade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="orbBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="orbOrange" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="pipeGrid" width="120" height="120" patternUnits="userSpaceOnUse">
+      <path d="M0 60H120M60 0V120" stroke="#ffffff" stroke-opacity="0.10" stroke-width="1"/>
+      <path d="M0 0L120 120M120 0L0 120" stroke="#38bdf8" stroke-opacity="0.05" stroke-width="1"/>
+      <circle cx="60" cy="60" r="3.2" fill="#ffffff" fill-opacity="0.10"/>
+    </pattern>
+
+    <pattern id="waterRipples" width="260" height="160" patternUnits="userSpaceOnUse">
+      <path d="M-10 40C30 10 70 10 110 40S190 70 230 40S310 10 350 40" stroke="#ffffff" stroke-opacity="0.10" stroke-width="1.25" fill="none"/>
+      <path d="M-10 78C30 48 70 48 110 78S190 108 230 78S310 48 350 78" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1.1" fill="none"/>
+      <path d="M-10 118C30 88 70 88 110 118S190 148 230 118S310 88 350 118" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.05" fill="none"/>
+    </pattern>
+
+    <filter id="softNoise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="2" stitchTiles="stitch" />
+      <feColorMatrix type="matrix" values="
+        1 0 0 0 0
+        0 1 0 0 0
+        0 0 1 0 0
+        0 0 0 0.17 0"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#pipeGrid)"/>
+  <rect width="1600" height="900" fill="url(#waterRipples)"/>
+
+  <g opacity="0.9">
+    <ellipse cx="220" cy="140" rx="190" ry="110" fill="url(#orbBlue)"/>
+    <ellipse cx="1320" cy="160" rx="210" ry="130" fill="url(#orbOrange)"/>
+    <ellipse cx="1180" cy="720" rx="240" ry="150" fill="url(#orbBlue)"/>
+    <ellipse cx="340" cy="710" rx="220" ry="140" fill="url(#orbOrange)"/>
+  </g>
+
+  <g opacity="0.9">
+    <path d="M-120 250C120 120 280 130 490 210C690 288 850 285 1050 185C1255 84 1420 96 1720 210"
+          stroke="url(#waveFade)" stroke-width="2.25" fill="none"/>
+    <path d="M-120 290C100 176 275 176 490 248C700 320 855 320 1050 226C1250 132 1450 135 1720 250"
+          stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.2" fill="none"/>
+    <path d="M-120 610C140 490 320 500 510 580C680 652 860 648 1030 560C1210 466 1400 468 1720 585"
+          stroke="#ffffff" stroke-opacity="0.07" stroke-width="1.15" fill="none"/>
+    <path d="M-120 660C140 550 315 555 510 628C700 700 865 700 1040 615C1220 530 1420 535 1720 650"
+          stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.05" fill="none"/>
+  </g>
+
+  <g opacity="0.85">
+    <circle cx="138" cy="770" r="5.5" fill="#ffffff" fill-opacity="0.11"/>
+    <circle cx="236" cy="785" r="3.5" fill="#ffffff" fill-opacity="0.08"/>
+    <circle cx="1450" cy="210" r="4.5" fill="#ffffff" fill-opacity="0.10"/>
+    <circle cx="1465" cy="246" r="2.8" fill="#ffffff" fill-opacity="0.08"/>
+    <circle cx="1280" cy="84" r="3.8" fill="#ffffff" fill-opacity="0.08"/>
+    <circle cx="105" cy="128" r="3.2" fill="#ffffff" fill-opacity="0.08"/>
+    <circle cx="895" cy="730" r="4.2" fill="#ffffff" fill-opacity="0.09"/>
+    <circle cx="980" cy="754" r="2.8" fill="#ffffff" fill-opacity="0.07"/>
+  </g>
+
+  <rect width="1600" height="900" filter="url(#softNoise)" opacity="0.07"/>
+</svg>
