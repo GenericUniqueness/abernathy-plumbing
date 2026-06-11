@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plumber in Raleigh | Abernathy Plumbing Services Raleigh NC</title>
+  <meta name="description" content="Need a plumber in Raleigh? Abernathy Plumbing Services Raleigh NC finds the root cause, keeps you updated, and is ready to call today for plumbing repairs." />
+  <meta property="og:title" content="Plumber in Raleigh | Abernathy Plumbing Services Raleigh NC" />
+  <meta property="og:description" content="Need a plumber in Raleigh? Abernathy Plumbing Services Raleigh NC finds the root cause, keeps you updated, and is ready to call today for plumbing repairs." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#1E3A5F" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind = {
+      config: {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif']
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --nav-h: 64px;
+      --hero-a: #1E3A5F;
+      --hero-b: #312E81;
+      --accent: #EA580C;
+      --accent-2: #2563EB;
+      --light: #FAFAF8;
+      --light-2: #EFF6FF;
+      --mid: #312E81;
+      --mid-2: #134E4A;
+      --footer: #0f2544;
+    }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+    body {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      padding-top: var(--nav-h);
+      color: #111827;
+      background: #fff;
+      overflow-x: hidden;
+    }
+
+    .nav-shell {
+      height: var(--nav-h);
+      transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .nav-shell.scrolled {
+      background: rgba(15, 37, 68, 0.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    }
+
+    .hero-bg {
+      position: relative;
+      background: linear-gradient(135deg, rgba(30,58,95,0.98), rgba(49,46,129,0.96));
+      overflow: hidden;
+    }
+    .hero-bg::before {
+      content: "";
+      position: absolute;
+      inset: -20%;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.15), transparent 36%),
+        radial-gradient(circle at 80% 18%, rgba(255,255,255,0.09), transparent 28%),
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.10), transparent 34%);
+      opacity: 0.55;
+      pointer-events: none;
+      animation: pulseGlow 3.2s ease-in-out infinite;
+    }
+    .hero-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.00));
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 1; }
+
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(1); opacity: 0.30; }
+      50% { transform: scale(1.05); opacity: 0.58; }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .soft-card {
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(229,231,235,0.95);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      border-radius: 1rem;
+    }
+    .dark-card {
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.16);
+      box-shadow: 0 10px 35px rgba(0,0,0,0.18);
+      border-radius: 1rem;
+      backdrop-filter: blur(10px);
+    }
+    .hover-lift {
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 34px rgba(0,0,0,0.12);
+    }
+    .btn-lift {
+      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    }
+    .btn-lift:hover {
+      transform: translateY(-2px);
+    }
+    .section-divider {
+      position: relative;
+    }
+    .section-divider::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 40px;
+      pointer-events: none;
+      background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.0));
+    }
+
+    .rating-pill {
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.22);
+      backdrop-filter: blur(10px);
+    }
+
+    .hamburger-line {
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.25s ease, opacity 0.25s ease;
+      opacity: 0;
+    }
+    .mobile-menu.open {
+      max-height: 320px;
+      opacity: 1;
+    }
+
+    .map-iframe {
+      width: 100%;
+      height: 420px;
+      border: 0;
+    }
+
+    .fab {
+      width: 52px;
+      height: 52px;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.20);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    }
+    .fab:hover {
+      transform: scale(1.1);
+    }
+    .fab.call:hover { box-shadow: 0 0 0 8px rgba(234,88,12,0.22), 0 10px 20px rgba(0,0,0,0.20); }
+    .fab.wa:hover { box-shadow: 0 0 0 8px rgba(37,211,102,0.20), 0 10px 20px rgba(0,0,0,0.20); }
+    .fab.sms:hover { box-shadow: 0 0 0 8px rgba(37,99,235,0.20), 0 10px 20px rgba(0,0,0,0.20); }
+
+    .nav-link.active {
+      color: #EA580C;
+      font-weight: 700;
+    }
+
+    .google-g text { font-family: Arial, sans-serif; font-weight: 700; }
+
+    @media (max-width: 767px) {
+      :root { --nav-h: 56px; }
+      .map-iframe { height: 260px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+      }
+      .reveal { opacity: 1 !important; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Abernathy Plumbing Services Raleigh NC",
+      "telephone": "+19847424111",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "7413 Six Forks Rd, Raleigh, NC 27615, United States",
+        "addressLocality": "Raleigh",
+        "addressCountry": "US"
+      },
+      "description": "Plumbing service in Raleigh focused on root-cause repairs, clear communication, and respectful service on jobs big or small.",
+      "areaServed": ["Raleigh", "surrounding areas"],
+      "url": "https://abernathyplumbingservicesraleighnc.com"
+    }
+  </script>
+</head>
+<body class="antialiased overflow-x-hidden">
+  <nav id="siteNav" class="nav-shell fixed top-0 left-0 right-0 z-[9998] bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-full">
+      <div class="h-full flex items-center justify-between">
+        <a href="#" class="text-[#EA580C] font-extrabold tracking-tight text-base sm:text-lg">
+          Abernathy Plumbing Services Raleigh NC
+        </a>
+
+        <div class="hidden md:flex items-center gap-8 text-white/90">
+          <a href="#services" class="nav-link text-sm font-medium hover:text-[#EA580C] transition-colors">Services</a>
+          <a href="#why-us" class="nav-link text-sm font-medium hover:text-[#EA580C] transition-colors">Why Us</a>
+          <a href="#reviews" class="nav-link text-sm font-medium hover:text-[#EA580C] transition-colors">Reviews</a>
+          <a href="#areas" class="nav-link text-sm font-medium hover:text-[#EA580C] transition-colors">Areas</a>
+          <a href="#contact" class="nav-link text-sm font-medium hover:text-[#EA580C] transition-colors">Contact</a>
+        </div>
+
+        <button id="menuButton" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-white/15 text-white bg-white/5" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" class="w-6 h-6 hamburger-line" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu md:hidden absolute left-0 right-0 top-full bg-[rgba(15,37,68,0.98)] backdrop-blur-xl border-t border-white/10 shadow-2xl">
+      <div class="px-4 py-3 flex flex-col gap-2 text-white">
+        <a href="#services" class="mobile-link px-4 py-3 rounded-xl hover:bg-white/10">Services</a>
+        <a href="#why-us" class="mobile-link px-4 py-3 rounded-xl hover:bg-white/10">Why Us</a>
+        <a href="#reviews" class="mobile-link px-4 py-3 rounded-xl hover:bg-white/10">Reviews</a>
+        <a href="#areas" class="mobile-link px-4 py-3 rounded-xl hover:bg-white/10">Areas</a>
+        <a href="#contact" class="mobile-link px-4 py-3 rounded-xl hover:bg-white/10">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-bg section-divider">
+    <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24 lg:py-28">
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <p class="inline-flex items-center px-4 py-1.5 rounded-full bg-white/10 border border-white/15 text-[#F59E0B] text-xs sm:text-sm font-semibold uppercase tracking-[0.18em] mb-5">
+          Solving plumbing problems, one leak at a time.
+        </p>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.08]">
+          Plumber in Raleigh
+        </h1>
+
+        <p class="mt-6 text-base sm:text-lg lg:text-xl text-white/88 max-w-3xl mx-auto leading-8">
+          We trace plumbing problems back to the source, keep you updated at every step, and treat small repairs with the same care as full installs.
+        </p>
+
+        <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="tel:+19847424111" class="btn-lift inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#EA580C] text-white font-semibold shadow-lg shadow-orange-900/25 hover:opacity-95">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.1 5.18 2 2 0 0 1 5.08 3h3a2 2 0 0 1 2 1.72c.12.89.32 1.77.6 2.61a2 2 0 0 1-.45 2.11L9.09 10.64a16 16 0 0 0 4.27 4.27l1.2-1.14a2 2 0 0 1 2.11-.45c.84.28 1.72.48 2.61.6A2 2 0 0 1 22 16.92Z"></path>
+            </svg>
+            Call Now
+          </a>
+          <a href="https://wa.me/19847424111" target="_blank" rel="noopener noreferrer" class="btn-lift inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl border border-white/75 text-white font-semibold bg-white/5 hover:bg-white/10">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor" aria-hidden="true">
+              <path d="M20.52 3.48A11.8 11.8 0 0 0 12.06 0C5.5 0 .16 5.3.16 11.83c0 2.09.55 4.12 1.59 5.9L0 24l6.46-1.68a11.9 11.9 0 0 0 5.6 1.42h.01c6.56 0 11.9-5.3 11.9-11.83 0-3.17-1.24-6.14-3.45-8.43Zm-8.46 18.2h-.01a9.86 9.86 0 0 1-5.04-1.38l-.36-.21-3.84 1 1.02-3.74-.23-.37a9.74 9.74 0 0 1-1.5-5.17c0-5.38 4.42-9.76 9.85-9.76a9.75 9.75 0 0 1 6.95 2.87 9.68 9.68 0 0 1 2.88 6.88c0 5.39-4.42 9.78-9.72 9.78Zm5.63-7.2c-.31-.16-1.85-.91-2.13-1.01-.29-.11-.49-.16-.7.16-.2.31-.81 1.01-.99 1.22-.18.2-.36.23-.67.08-.31-.16-1.31-.48-2.49-1.53-.92-.82-1.54-1.84-1.72-2.15-.18-.31-.02-.48.13-.63.13-.13.31-.36.47-.54.16-.18.21-.31.31-.52.1-.2.05-.39-.03-.54-.08-.16-.7-1.68-.96-2.3-.25-.59-.51-.5-.7-.51h-.6c-.21 0-.54.08-.82.39-.28.31-1.06 1.04-1.06 2.54s1.09 2.94 1.24 3.14c.16.2 2.15 3.28 5.2 4.61.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.85-.75 2.11-1.48.26-.72.26-1.34.18-1.48-.08-.13-.28-.2-.59-.36Z"></path>
+            </svg>
+            WhatsApp Us
+          </a>
+        </div>
+
+        <div class="mt-8 flex flex-col items-center gap-4">
+          <a href="https://search.google.com/local/writereview?placeid=ChIJnc25vr9ZrIkRylPnaT1GKYI" target="_blank" rel="noopener noreferrer" class="rating-pill inline-flex items-center gap-3 px-4 py-2.5 rounded-full text-white shadow-lg">
+            <span class="inline-flex items-center gap-0.5" aria-hidden="true">
+              <svg viewBox="0 0 24 24" class="w-4.5 h-4.5 google-g" fill="none">
+                <path d="M21.6 12.27c0-.73-.06-1.27-.18-1.84H12v3.48h5.52c-.11.87-.72 2.19-2.06 3.07l-.02.12 2.97 2.3.21.02c1.93-1.78 3.03-4.39 3.03-7.15Z" fill="#4285F4"/>
+                <path d="M12 22c2.76 0 5.07-.9 6.76-2.47l-3.22-2.48c-.86.59-2.02 1-3.54 1-2.72 0-5.03-1.79-5.86-4.25l-.11.01-3.1 2.4-.04.11A10 10 0 0 0 12 22Z" fill="#34A853"/>
+                <path d="M6.14 13.8A6 6 0 0 1 5.8 12c0-.63.11-1.24.33-1.8l-.01-.12-3.15-2.44-.1.05A10 10 0 0 0 2 12c0 1.61.38 3.13 1.07 4.49l3.07-2.38Z" fill="#FBBC05"/>
+                <path d="M12 5.88c1.92 0 3.21.83 3.95 1.52l2.88-2.81C17.06 2.97 14.76 2 12 2a10 10 0 0 0-9 5.58l3.13 2.43C6.97 7.68 9.28 5.88 12 5.88Z" fill="#EA4335"/>
+              </svg>
+              <svg viewBox="0 0 24 24" class="w-4.5 h-4.5" fill="#FBBF24" aria-hidden="true">
+                <path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"></path>
+              </svg>
+              <svg viewBox="0 0 24 24" class="w-4.5 h-4.5" fill="#FBBF24" aria-hidden="true"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"></path></svg>
+              <svg viewBox="0 0 24 24" class="w-4.5 h-4.5" fill="#FBBF24" aria-hidden="true"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"></path></svg>
+              <svg viewBox="0 0 24 24" class="w-4.5 h-4.5" fill="#FBBF24" aria-hidden="true"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"></path></svg>
+              <svg viewBox="0 0 24 24" class="w-4.5 h-4.5" fill="#FBBF24" aria-hidden="true"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"></path></svg>
+            </span>
+            <span class="font-semibold text-white">4.2</span>
+            <span class="text-white/75">· 5 Google reviews</span>
+          </a>
+
+          <div class="dark-card max-w-xl text-left p-4 sm:p-5">
+            <div class="flex items-start gap-3">
+              <div class="text-[#F59E0B] text-4xl leading-none -mt-1">“</div>
+              <div class="flex-1">
+                <p class="text-white/92 italic text-[15px] sm:text-base leading-7">
+                  Used them for shower repair after a valve issue. The evaluation took time, but the fix addressed the root cause. Everything works smoothly now.
+                </p>
+                <div class="mt-3 flex items-center justify-between gap-3">
+                  <div>
+                    <div class="text-white font-semibold text-sm">A Google user</div>
+                    <div class="flex items-center gap-1 mt-1" aria-label="5 stars">
+                      <svg viewBox="0 0 24 24" class="w-4 h-4" fill="#FBBF24"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+                      <svg viewBox="0 0 24 24" class="w-4 h-4" fill="#FBBF24"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+                      <svg viewBox="0 0 24 24" class="w-4 h-4" fill="#FBBF24"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+                      <svg viewBox="0 0 24 24" class="w-4 h-4" fill="#FBBF24"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+                      <svg viewBox="0 0 24 24" class="w-4 h-4" fill="#FBBF24"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-center gap-4 text-white/80 text-sm sm:text-[15px]">
+            <span class="inline-flex items-center gap-2">
+              <svg viewBox="0 0 24 24" class="w-4.5 h-4.5 text-[#F59E0B]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 13c0 5-4 8-8 8s-8-3-8-8c0-4 2-6 8-11 6 5 8 7 8 11Z"></path>
+              </svg>
+              Root-cause fixes
+            </span>
+            <span class="inline-flex items-center gap-2">
+              <svg viewBox="0 0 24 24" class="w-4.5 h-4.5 text-[#60A5FA]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 12h16M12 4v16"></path>
+              </svg>
+              Clear communication
+            </span>
+            <span class="inline-flex items-center gap-2">
+              <svg viewBox="0 0 24 24" class="w-4.5 h-4.5 text-[#34D399]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 6 9 17l-5-5"></path>
+              </svg>
+              Small jobs welcomed
+            </span>
+            <span class="inline-flex items-center gap-2">
+              <svg viewBox="0 0 24 24" class="w-4.5 h-4.5 text-[#F59E0B]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z"></path>
+              </svg>
+              Raleigh & nearby
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="trust" class="reveal bg-[#EFF6FF]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14 sm:py-16">
+        <div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
+          <div class="soft-card p-5">
+            <svg viewBox="0 0 24 24" class="w-10 h-10 text-[#EA580C]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 21s6-4 6-10a6 6 0 0 0-12 0c0 6 6 10 6 10Z"></path>
+              <path d="M12 9v4"></path>
+              <path d="M12 17h.01"></path>
+            </svg>
+            <div class="mt-4 text-3xl font-extrabold text-[#111827]">Raleigh</div>
+            <div class="mt-1 text-sm text-[#4B5563]">Local service base</div>
+          </div>
+          <div class="soft-card p-5">
+            <svg viewBox="0 0 24 24" class="w-10 h-10 text-[#2563EB]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 12h16M12 4v16"></path>
+              <path d="M7 7l10 10"></path>
+            </svg>
+            <div class="mt-4 text-3xl font-extrabold text-[#111827]">Root cause</div>
+            <div class="mt-1 text-sm text-[#4B5563]">Fix the problem at source</div>
+          </div>
+          <div class="soft-card p-5">
+            <svg viewBox="0 0 24 24" class="w-10 h-10 text-[#EA580C]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3a7 7 0 0 0-7 7v3l-2 4h18l-2-4v-3a7 7 0 0 0-7-7Z"></path>
+            </svg>
+            <div class="mt-4 text-3xl font-extrabold text-[#111827]">Clear updates</div>
+            <div class="mt-1 text-sm text-[#4B5563]">Straight communication</div>
+          </div>
+          <div class="soft-card p-5">
+            <svg viewBox="0 0 24 24" class="w-10 h-10 text-[#2563EB]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 7h10v10H7z"></path>
+              <path d="M4 12h3M17 12h3"></path>
+            </svg>
+            <div class="mt-4 text-3xl font-extrabold text-[#111827]">5</div>
+            <div class="mt-1 text-sm text-[#4B5563]">Google reviews shown</div>
+          </div>
+          <div class="soft-card p-5">
+            <svg viewBox="0 0 24 24" class="w-10 h-10 text-[#EA580C]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 19h16"></path>
+              <path d="M5 19V9l7-4 7 4v10"></path>
+              <path d="M9 19v-6h6v6"></path>
+            </svg>
+            <div class="mt-4 text-3xl font-extrabold text-[#111827]">Small jobs</div>
+            <div class="mt-1 text-sm text-[#4B5563]">Handled with care</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="reveal bg-[#FAFAF8]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24">
+        <div class="max-w-2xl mb-10">
+          <p class="text-xs sm:text-sm uppercase tracking-[0.18em] text-[#EA580C] font-bold">Services</p>
+          <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-[#111827]">
+            Plumbing in Raleigh, fixed at the source
+          </h2>
+          <p class="mt-4 text-lg text-[#4B5563] leading-8">
+            These are the Raleigh plumbing jobs we handle most often: the ones where the goal is to stop the leak, clear the blockage, or get the fixture working properly again.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="soft-card hover-lift p-6 border-l-4 border-[#EA580C]">
+            <svg viewBox="0 0 24 24" class="w-12 h-12 text-[#EA580C]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M8 7a4 4 0 0 1 8 0v3H8V7Z"></path>
+              <path d="M7 10h10v9H7z"></path>
+              <path d="M10 19v2M14 19v2"></path>
+              <path d="M12 4V2"></path>
+            </svg>
+            <h3 class="mt-5 text-xl font-semibold text-[#111827]">Water heater installation</h3>
+            <p class="mt-3 text-[#4B5563] leading-7">
+              When the tank is past its best days or hot water keeps falling off, we install the replacement safely and cleanly so the house gets back to normal.
+            </p>
+            <a href="#contact" class="mt-4 inline-flex items-center gap-2 text-[#EA580C] font-semibold hover:underline">
+              Book This Service
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="soft-card hover-lift p-6 border-l-4 border-[#2563EB]">
+            <svg viewBox="0 0 24 24" class="w-12 h-12 text-[#2563EB]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 12h8"></path>
+              <path d="M12 8h6a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-3"></path>
+              <path d="M12 16v3"></path>
+              <path d="M9 19h6"></path>
+              <path d="M6 12v5"></path>
+            </svg>
+            <h3 class="mt-5 text-xl font-semibold text-[#111827]">Plumbing pipe repair</h3>
+            <p class="mt-3 text-[#4B5563] leading-7">
+              Stops leaks, pressure problems, and damage spreading inside the line. We find the weak point, repair it properly, and leave the pipe stable.
+            </p>
+            <a href="#contact" class="mt-4 inline-flex items-center gap-2 text-[#EA580C] font-semibold hover:underline">
+              Get a Quote
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="soft-card hover-lift p-6 border-l-4 border-[#EA580C]">
+            <svg viewBox="0 0 24 24" class="w-12 h-12 text-[#EA580C]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3c-2.5 3.5-4 5.5-4 8a4 4 0 0 0 8 0c0-2.5-1.5-4.5-4-8Z"></path>
+              <path d="M12 19v2"></path>
+              <path d="M9 16h6"></path>
+            </svg>
+            <h3 class="mt-5 text-xl font-semibold text-[#111827]">Plumbing leak detection</h3>
+            <p class="mt-3 text-[#4B5563] leading-7">
+              Finds the source behind wet spots, damp smells, or a water bill that keeps climbing. The point is to locate the problem before it grows.
+            </p>
+            <a href="#contact" class="mt-4 inline-flex items-center gap-2 text-[#EA580C] font-semibold hover:underline">
+              Get a Quote
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="soft-card hover-lift p-6 border-l-4 border-[#2563EB]">
+            <svg viewBox="0 0 24 24" class="w-12 h-12 text-[#2563EB]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12a7 7 0 1 0 14 0"></path>
+              <path d="M12 5v2"></path>
+              <path d="M9 19h6"></path>
+              <path d="M12 14v3"></path>
+              <path d="M8 12h8"></path>
+            </svg>
+            <h3 class="mt-5 text-xl font-semibold text-[#111827]">Drain cleaning</h3>
+            <p class="mt-3 text-[#4B5563] leading-7">
+              Clears slow sinks, backed-up showers, and repeated clogs so water moves again without forcing the blockage deeper into the line.
+            </p>
+            <a href="#contact" class="mt-4 inline-flex items-center gap-2 text-[#EA580C] font-semibold hover:underline">
+              Book This Service
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="soft-card hover-lift p-6 border-l-4 border-[#EA580C]">
+            <svg viewBox="0 0 24 24" class="w-12 h-12 text-[#EA580C]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 9h10a3 3 0 0 1 3 3v7H5V9Z"></path>
+              <path d="M8 9V6a4 4 0 0 1 8 0v3"></path>
+              <path d="M9 13v3"></path>
+              <path d="M15 13v3"></path>
+            </svg>
+            <h3 class="mt-5 text-xl font-semibold text-[#111827]">Toilet installation</h3>
+            <p class="mt-3 text-[#4B5563] leading-7">
+              Replaces old fixtures cleanly and gets the new toilet seated, sealed, and working correctly without leaving you with a messy finish.
+            </p>
+            <a href="#contact" class="mt-4 inline-flex items-center gap-2 text-[#EA580C] font-semibold hover:underline">
+              Book This Service
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="soft-card hover-lift p-6 border-l-4 border-[#2563EB]">
+            <svg viewBox="0 0 24 24" class="w-12 h-12 text-[#2563EB]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3v3"></path>
+              <path d="M8 6h8"></path>
+              <path d="M7 9h10"></path>
+              <path d="M9 9l-2 12h10l-2-12"></path>
+              <path d="M10 13h4"></path>
+            </svg>
+            <h3 class="mt-5 text-xl font-semibold text-[#111827]">Shower repair</h3>
+            <p class="mt-3 text-[#4B5563] leading-7">
+              Fixes valve issues, pressure swings, and temperature problems so the shower works the way it should again instead of acting up every morning.
+            </p>
+            <a href="#contact" class="mt-4 inline-flex items-center gap-2 text-[#EA580C] font-semibold hover:underline">
+              Get a Quote
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+        </div>
+
+        <div class="mt-6 text-sm sm:text-base text-[#4B5563]">
+          Also available: <span class="font-semibold text-[#111827]">tap repair</span>, <span class="font-semibold text-[#111827]">garbage disposal installation</span>, and <span class="font-semibold text-[#111827]">pool plumbing repair</span>.
+        </div>
+      </div>
+    </section>
+
+    <section id="why-us" class="reveal bg-[#312E81] text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24">
+        <div class="max-w-2xl">
+          <p class="text-xs sm:text-sm uppercase tracking-[0.18em] text-[#F59E0B] font-bold">Why Raleigh Chooses Us</p>
+          <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+            Why Raleigh calls us when the leak will not wait
+          </h2>
+          <p class="mt-4 text-lg text-white/82 leading-8">
+            The difference is simple: we look for the cause, explain what we found, and handle the job with the same attention whether it is a small repair or a bigger install.
+          </p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="dark-card p-5 sm:p-6">
+            <div class="flex items-center gap-3">
+              <svg viewBox="0 0 24 24" class="w-11 h-11 text-[#F59E0B]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 21s6-4 6-10a6 6 0 0 0-12 0c0 6 6 10 6 10Z"></path>
+                <path d="M12 9v4"></path>
+                <path d="M12 17h.01"></path>
+              </svg>
+              <div>
+                <h3 class="text-xl font-semibold">Root cause first</h3>
+                <p class="text-white/80 mt-1 leading-7">Problems are checked from the source, not just the symptom. That keeps the fix focused and avoids repeated calls for the same issue.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="dark-card p-5 sm:p-6">
+            <div class="flex items-center gap-3">
+              <svg viewBox="0 0 24 24" class="w-11 h-11 text-[#60A5FA]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 12h16M12 4v16"></path>
+                <path d="M7 7l10 10"></path>
+              </svg>
+              <div>
+                <h3 class="text-xl font-semibold">Proper communication</h3>
+                <p class="text-white/80 mt-1 leading-7">You hear what was found, what needs attention, and what comes next. No vague language. No guessing what the plumber meant.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="dark-card p-5 sm:p-6">
+            <div class="flex items-center gap-3">
+              <svg viewBox="0 0 24 24" class="w-11 h-11 text-[#34D399]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 6 9 17l-5-5"></path>
+                <path d="M4 12h4"></path>
+              </svg>
+              <div>
+                <h3 class="text-xl font-semibold">Big or small job</h3>
+                <p class="text-white/80 mt-1 leading-7">A dripping tap gets the same professional approach as a larger install. If it matters in your home, it matters on our side too.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="dark-card p-5">
+            <div class="text-3xl font-extrabold text-white">4.2</div>
+            <div class="mt-1 text-white/78">Google rating</div>
+          </div>
+          <div class="dark-card p-5">
+            <div class="text-3xl font-extrabold text-white">5</div>
+            <div class="mt-1 text-white/78">Google reviews shown</div>
+          </div>
+          <div class="dark-card p-5">
+            <div class="text-3xl font-extrabold text-white">Raleigh</div>
+            <div class="mt-1 text-white/78">And surrounding areas</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="reveal bg-[#FAFAF8]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24">
+        <div class="max-w-3xl">
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+            <div>
+              <p class="text-xs sm:text-sm uppercase tracking-[0.18em] text-[#EA580C] font-bold">Reviews</p>
+              <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] leading-tight">
+                What Our Customers Are Saying
+              </h2>
+            </div>
+            <a href="https://search.google.com/local/writereview?placeid=ChIJnc25vr9ZrIkRylPnaT1GKYI" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#E5E7EB] shadow-sm text-[#111827] font-semibold">
+              <span class="inline-flex items-center gap-0.5" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="w-4 h-4 google-g" fill="none">
+                  <path d="M21.6 12.27c0-.73-.06-1.27-.18-1.84H12v3.48h5.52c-.11.87-.72 2.19-2.06 3.07l-.02.12 2.97 2.3.21.02c1.93-1.78 3.03-4.39 3.03-7.15Z" fill="#4285F4"/>
+                  <path d="M12 22c2.76 0 5.07-.9 6.76-2.47l-3.22-2.48c-.86.59-2.02 1-3.54 1-2.72 0-5.03-1.79-5.86-4.25l-.11.01-3.1 2.4-.04.11A10 10 0 0 0 12 22Z" fill="#34A853"/>
+                  <path d="M6.14 13.8A6 6 0 0 1 5.8 12c0-.63.11-1.24.33-1.8l-.01-.12-3.15-2.44-.1.05A10 10 0 0 0 2 12c0 1.61.38 3.13 1.07 4.49l3.07-2.38Z" fill="#FBBC05"/>
+                  <path d="M12 5.88c1.92 0 3.21.83 3.95 1.52l2.88-2.81C17.06 2.97 14.76 2 12 2a10 10 0 0 0-9 5.58l3.13 2.43C6.97 7.68 9.28 5.88 12 5.88Z" fill="#EA4335"/>
+                </svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="#FBBF24" aria-hidden="true"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="#FBBF24" aria-hidden="true"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="#FBBF24" aria-hidden="true"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="#FBBF24" aria-hidden="true"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="#FBBF24" aria-hidden="true"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+              </span>
+              <span class="text-sm">4.2 (5 reviews)</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <article class="soft-card hover-lift p-6 border-t-4 border-[#EA580C]">
+            <div class="flex items-center gap-1" aria-label="5 stars">
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="#FBBF24"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="#FBBF24"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="#FBBF24"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="#FBBF24"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="#FBBF24"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+            </div>
+            <p class="mt-4 text-[#111827] leading-8">"Pool plumbing repair isn’t easy to schedule, but they fit us in. The consultation covered pressure loss and minor leaks. Repair took a bit longer due to access, but communication was steady. Pool system is running smoothly again."</p>
+            <div class="mt-5 flex items-center justify-between gap-3">
+              <div class="font-semibold text-[#111827]">A Google user</div>
+              <div class="inline-flex items-center gap-1 text-sm text-[#4B5563]">
+                <svg viewBox="0 0 24 24" class="w-4 h-4 google-g" fill="none" aria-hidden="true">
+                  <path d="M21.6 12.27c0-.73-.06-1.27-.18-1.84H12v3.48h5.52c-.11.87-.72 2.19-2.06 3.07l-.02.12 2.97 2.3.21.02c1.93-1.78 3.03-4.39 3.03-7.15Z" fill="#4285F4"/>
+                  <path d="M12 22c2.76 0 5.07-.9 6.76-2.47l-3.22-2.48c-.86.59-2.02 1-3.54 1-2.72 0-5.03-1.79-5.86-4.25l-.11.01-3.1 2.4-.04.11A10 10 0 0 0 12 22Z" fill="#34A853"/>
+                  <path d="M6.14 13.8A6 6 0 0 1 5.8 12c0-.63.11-1.24.33-1.8l-.01-.12-3.15-2.44-.1.05A10 10 0 0 0 2 12c0 1.61.38 3.13 1.07 4.49l3.07-2.38Z" fill="#FBBC05"/>
+                  <path d="M12 5.88c1.92 0 3.21.83 3.95 1.52l2.88-2.81C17.06 2.97 14.76 2 12 2a10 10 0 0 0-9 5.58l3.13 2.43C6.97 7.68 9.28 5.88 12 5.88Z" fill="#EA4335"/>
+                </svg>
+                Google Review
+              </div>
+            </div>
+          </article>
+
+          <article class="soft-card hover-lift p-6 border-t-4 border-[#2563EB]">
+            <div class="flex items-center gap-1" aria-label="5 stars">
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="#FBBF24"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="#FBBF24"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="#FBBF24"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="#FBBF24"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="#FBBF24"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+            </div>
+            <p class="mt-4 text-[#111827] leading-8">"I needed a quick tap repair for a leaky faucet that was keeping me awake at night. The service was scheduled for the next morning and the plumber was very professional about the whole thing. It was a minor job but they treated it with a lot of care."</p>
+            <div class="mt-5 flex items-center justify-between gap-3">
+              <div class="font-semibold text-[#111827]">Karl Emery</div>
+              <div class="inline-flex items-center gap-1 text-sm text-[#4B5563]">
+                <svg viewBox="0 0 24 24" class="w-4 h-4 google-g" fill="none" aria-hidden="true">
+                  <path d="M21.6 12.27c0-.73-.06-1.27-.18-1.84H12v3.48h5.52c-.11.87-.72 2.19-2.06 3.07l-.02.12 2.97 2.3.21.02c1.93-1.78 3.03-4.39 3.03-7.15Z" fill="#4285F4"/>
+                  <path d="M12 22c2.76 0 5.07-.9 6.76-2.47l-3.22-2.48c-.86.59-2.02 1-3.54 1-2.72 0-5.03-1.79-5.86-4.25l-.11.01-3.1 2.4-.04.11A10 10 0 0 0 12 22Z" fill="#34A853"/>
+                  <path d="M6.14 13.8A6 6 0 0 1 5.8 12c0-.63.11-1.24.33-1.8l-.01-.12-3.15-2.44-.1.05A10 10 0 0 0 2 12c0 1.61.38 3.13 1.07 4.49l3.07-2.38Z" fill="#FBBC05"/>
+                  <path d="M12 5.88c1.92 0 3.21.83 3.95 1.52l2.88-2.81C17.06 2.97 14.76 2 12 2a10 10 0 0 0-9 5.58l3.13 2.43C6.97 7.68 9.28 5.88 12 5.88Z" fill="#EA4335"/>
+                </svg>
+                Google Review
+              </div>
+            </div>
+          </article>
+
+          <article class="soft-card hover-lift p-6 border-t-4 border-[#EA580C]">
+            <div class="flex items-center gap-1" aria-label="5 stars">
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="#FBBF24"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="#FBBF24"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="#FBBF24"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="#FBBF24"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="#FBBF24"><path d="M12 17.3 6.24 20.7l1.56-6.53L2.73 9.88l6.67-.55L12 3.1l2.6 6.23 6.67.55-5.07 4.29 1.56 6.53L12 17.3Z"/></svg>
+            </div>
+            <p class="mt-4 text-[#111827] leading-8">"Our water heater installation required some space adjustments. The team communicated each step and checked safety items. The work area was left tidy. Hot water recovery has improved."</p>
+            <div class="mt-5 flex items-center justify-between gap-3">
+              <div class="font-semibold text-[#111827]">A Google user</div>
+              <div class="inline-flex items-center gap-1 text-sm text-[#4B5563]">
+                <svg viewBox="0 0 24 24" class="w-4 h-4 google-g" fill="none" aria-hidden="true">
+                  <path d="M21.6 12.27c0-.73-.06-1.27-.18-1.84H12v3.48h5.52c-.11.87-.72 2.19-2.06 3.07l-.02.12 2.97 2.3.21.02c1.93-1.78 3.03-4.39 3.03-7.15Z" fill="#4285F4"/>
+                  <path d="M12 22c2.76 0 5.07-.9 6.76-2.47l-3.22-2.48c-.86.59-2.02 1-3.54 1-2.72 0-5.03-1.79-5.86-4.25l-.11.01-3.1 2.4-.04.11A10 10 0 0 0 12 22Z" fill="#34A853"/>
+                  <path d="M6.14 13.8A6 6 0 0 1 5.8 12c0-.63.11-1.24.33-1.8l-.01-.12-3.15-2.44-.1.05A10 10 0 0 0 2 12c0 1.61.38 3.13 1.07 4.49l3.07-2.38Z" fill="#FBBC05"/>
+                  <path d="M12 5.88c1.92 0 3.21.83 3.95 1.52l2.88-2.81C17.06 2.97 14.76 2 12 2a10 10 0 0 0-9 5.58l3.13 2.43C6.97 7.68 9.28 5.88 12 5.88Z" fill="#EA4335"/>
+                </svg>
+                Google Review
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-10 flex justify-center">
+          <a href="https://search.google.com/local/writereview?placeid=ChIJnc25vr9ZrIkRylPnaT1GKYI" target="_blank" rel="noopener noreferrer" class="btn-lift inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#EA580C] text-white font-semibold shadow-lg shadow-orange-900/20">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 google-g" fill="none" aria-hidden="true">
+              <path d="M21.6 12.27c0-.73-.06-1.27-.18-1.84H12v3.48h5.52c-.11.87-.72 2.19-2.06 3.07l-.02.12 2.97 2.3.21.02c1.93-1.78 3.03-4.39 3.03-7.15Z" fill="#ffffff"/>
+              <path d="M12 22c2.76 0 5.07-.9 6.76-2.47l-3.22-2.48c-.86.59-2.02 1-3.54 1-2.72 0-5.03-1.79-5.86-4.25l-.11.01-3.1 2.4-.04.11A10 10 0 0 0 12 22Z" fill="#ffffff"/>
+              <path d="M6.14 13.8A6 6 0 0 1 5.8 12c0-.63.11-1.24.33-1.8l-.01-.12-3.15-2.44-.1.05A10 10 0 0 0 2 12c0 1.61.38 3.13 1.07 4.49l3.07-2.38Z" fill="#ffffff"/>
+              <path d="M12 5.88c1.92 0 3.21.83 3.95 1.52l2.88-2.81C17.06 2.97 14.76 2 12 2a10 10 0 0 0-9 5.58l3.13 2.43C6.97 7.68 9.28 5.88 12 5.88Z" fill="#ffffff"/>
+            </svg>
+            Leave Us a Google Review
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="areas" class="reveal bg-[#134E4A] text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24">
+        <div class="max-w-2xl">
+          <p class="text-xs sm:text-sm uppercase tracking-[0.18em] text-[#F59E0B] font-bold">Service Area</p>
+          <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+            Plumbing in Raleigh and the nearby areas we cover
+          </h2>
+          <p class="mt-4 text-lg text-white/82 leading-8">
+            We serve Raleigh from Six Forks Rd and keep the coverage practical for homes and businesses nearby. If the job is in our service radius, we will tell you straight and get you moving in the right direction.
+          </p>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <span class="px-4 py-2 rounded-full border border-white/16 bg-white/10 text-white/92">Raleigh</span>
+          <span class="px-4 py-2 rounded-full border border-white/16 bg-white/10 text-white/92">Surrounding areas</span>
+        </div>
+
+        <p class="mt-8 text-white/84 leading-8">
+          Not sure if we cover your area? Just call or WhatsApp — we’ll let you know in seconds.
+        </p>
+      </div>
+    </section>
+
+    <section id="map" class="reveal bg-[#1E3A5F] text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24">
+        <div class="max-w-3xl">
+          <p class="text-xs sm:text-sm uppercase tracking-[0.18em] text-[#F59E0B] font-bold">Map</p>
+          <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+            Find Abernathy Plumbing Services Raleigh NC in Raleigh
+          </h2>
+          <p class="mt-4 text-white/82 leading-8">
+            <span class="font-semibold text-white">7413 Six Forks Rd, Raleigh, NC 27615, United States</span>
+            <br />
+            <a href="tel:+19847424111" class="inline-flex items-center gap-2 mt-2 text-white hover:text-[#F59E0B] transition-colors">
+              <svg viewBox="0 0 24 24" class="w-4.5 h-4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.1 5.18 2 2 0 0 1 5.08 3h3a2 2 0 0 1 2 1.72c.12.89.32 1.77.6 2.61a2 2 0 0 1-.45 2.11L9.09 10.64a16 16 0 0 0 4.27 4.27l1.2-1.14a2 2 0 0 1 2.11-.45c.84.28 1.72.48 2.61.6A2 2 0 0 1 22 16.92Z"></path>
+              </svg>
+              +19847424111
+            </a>
+          </p>
+        </div>
+
+        <div class="mt-8 rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-white/5">
+          <iframe
+            class="map-iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2988.558475259008!2d-78.6471375!3d35.8810092!2m3!1f0!2f0!3f0!2m3!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ac59bfbeb9cd9d%3A0x8229463d69e753ca!2sAbernathy%20Plumbing%20Services%20Raleigh%20NC!5e1!3m2!1sen!2s!4v1781187241280!5m2!1sen!2s"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen=""
+            title="Abernathy Plumbing Services Raleigh NC map"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal hero-bg text-white">
+      <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24 lg:py-28 text-center">
+        <div class="max-w-4xl mx-auto">
+          <p class="text-xs sm:text-sm uppercase tracking-[0.18em] text-[#F59E0B] font-bold mb-4">Contact</p>
+          <h2 class="text-3xl sm:text-4xl lg:text-6xl font-extrabold leading-[1.08]">
+            Got a plumbing problem in Raleigh that should be fixed today?
+          </h2>
+          <p class="mt-6 text-base sm:text-lg lg:text-xl text-white/86 max-w-3xl mx-auto leading-8">
+            Call now or send a WhatsApp message and we will talk through the issue, the likely cause, and the next step. The work starts with the right diagnosis, not a rushed guess.
+          </p>
+
+          <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="tel:+19847424111" class="btn-lift inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#EA580C] text-white font-semibold shadow-lg shadow-orange-900/25">
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.1 5.18 2 2 0 0 1 5.08 3h3a2 2 0 0 1 2 1.72c.12.89.32 1.77.6 2.61a2 2 0 0 1-.45 2.11L9.09 10.64a16 16 0 0 0 4.27 4.27l1.2-1.14a2 2 0 0 1 2.11-.45c.84.28 1.72.48 2.61.6A2 2 0 0 1 22 16.92Z"></path>
+              </svg>
+              Call Now
+            </a>
+            <a href="https://wa.me/19847424111" target="_blank" rel="noopener noreferrer" class="btn-lift inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl border border-white/75 text-white font-semibold bg-white/5 hover:bg-white/10">
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor" aria-hidden="true">
+                <path d="M20.52 3.48A11.8 11.8 0 0 0 12.06 0C5.5 0 .16 5.3.16 11.83c0 2.09.55 4.12 1.59 5.9L0 24l6.46-1.68a11.9 11.9 0 0 0 5.6 1.42h.01c6.56 0 11.9-5.3 11.9-11.83 0-3.17-1.24-6.14-3.45-8.43Zm-8.46 18.2h-.01a9.86 9.86 0 0 1-5.04-1.38l-.36-.21-3.84 1 1.02-3.74-.23-.37a9.74 9.74 0 0 1-1.5-5.17c0-5.38 4.42-9.76 9.85-9.76a9.75 9.75 0 0 1 6.95 2.87 9.68 9.68 0 0 1 2.88 6.88c0 5.39-4.42 9.78-9.72 9.78Zm5.63-7.2c-.31-.16-1.85-.91-2.13-1.01-.29-.11-.49-.16-.7.16-.2.31-.81 1.01-.99 1.22-.18.2-.36.23-.67.08-.31-.16-1.31-.48-2.49-1.53-.92-.82-1.54-1.84-1.72-2.15-.18-.31-.02-.48.13-.63.13-.13.31-.36.47-.54.16-.18.21-.31.31-.52.1-.2.05-.39-.03-.54-.08-.16-.7-1.68-.96-2.3-.25-.59-.51-.5-.7-.51h-.6c-.21 0-.54.08-.82.39-.28.31-1.06 1.04-1.06 2.54s1.09 2.94 1.24 3.14c.16.2 2.15 3.28 5.2 4.61.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.85-.75 2.11-1.48.26-.72.26-1.34.18-1.48-.08-.13-.28-.2-.59-.36Z"></path>
+              </svg>
+              WhatsApp Us
+            </a>
+          </div>
+
+          <div class="mt-8 text-white/84 text-sm sm:text-base">
+            Root-cause fixes · Clear communication · Respectful on small jobs
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#0f2544] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14 sm:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div>
+          <div class="text-2xl font-extrabold text-[#EA580C]">Abernathy Plumbing Services Raleigh NC</div>
+          <p class="mt-3 text-white/80 leading-7">
+            Solving plumbing problems in Raleigh and the surrounding areas, with clear updates and repairs that get to the cause.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold">Contact</h3>
+          <div class="mt-4 space-y-3 text-white/82">
+            <a href="tel:+19847424111" class="inline-flex items-center gap-3 hover:text-[#F59E0B] transition-colors">
+              <svg viewBox="0 0 24 24" class="w-4.5 h-4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.1 5.18 2 2 0 0 1 5.08 3h3a2 2 0 0 1 2 1.72c.12.89.32 1.77.6 2.61a2 2 0 0 1-.45 2.11L9.09 10.64a16 16 0 0 0 4.27 4.27l1.2-1.14a2 2 0 0 1 2.11-.45c.84.28 1.72.48 2.61.6A2 2 0 0 1 22 16.92Z"></path>
+              </svg>
+              +19847424111
+            </a>
+            <a href="https://wa.me/19847424111" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 hover:text-[#F59E0B] transition-colors">
+              <svg viewBox="0 0 24 24" class="w-4.5 h-4.5" fill="currentColor" aria-hidden="true">
+                <path d="M20.52 3.48A11.8 11.8 0 0 0 12.06 0C5.5 0 .16 5.3.16 11.83c0 2.09.55 4.12 1.59 5.9L0 24l6.46-1.68a11.9 11.9 0 0 0 5.6 1.42h.01c6.56 0 11.9-5.3 11.9-11.83 0-3.17-1.24-6.14-3.45-8.43Zm-8.46 18.2h-.01a9.86 9.86 0 0 1-5.04-1.38l-.36-.21-3.84 1 1.02-3.74-.23-.37a9.74 9.74 0 0 1-1.5-5.17c0-5.38 4.42-9.76 9.85-9.76a9.75 9.75 0 0 1 6.95 2.87 9.68 9.68 0 0 1 2.88 6.88c0 5.39-4.42 9.78-9.72 9.78Zm5.63-7.2c-.31-.16-1.85-.91-2.13-1.01-.29-.11-.49-.16-.7.16-.2.31-.81 1.01-.99 1.22-.18.2-.36.23-.67.08-.31-.16-1.31-.48-2.49-1.53-.92-.82-1.54-1.84-1.72-2.15-.18-.31-.02-.48.13-.63.13-.13.31-.36.47-.54.16-.18.21-.31.31-.52.1-.2.05-.39-.03-.54-.08-.16-.7-1.68-.96-2.3-.25-.59-.51-.5-.7-.51h-.6c-.21 0-.54.08-.82.39-.28.31-1.06 1.04-1.06 2.54s1.09 2.94 1.24 3.14c.16.2 2.15 3.28 5.2 4.61.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.85-.75 2.11-1.48.26-.72.26-1.34.18-1.48-.08-.13-.28-.2-.59-.36Z"></path>
+              </svg>
+              WhatsApp
+            </a>
+            <div class="inline-flex items-start gap-3">
+              <svg viewBox="0 0 24 24" class="w-4.5 h-4.5 mt-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 21s6-4 6-10a6 6 0 0 0-12 0c0 6 6 10 6 10Z"></path>
+                <path d="M12 9v4"></path>
+                <path d="M12 17h.01"></path>
+              </svg>
+              <span>7413 Six Forks Rd, Raleigh, NC 27615, United States</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold">Quick links</h3>
+          <div class="mt-4 space-y-3">
+            <a href="https://search.google.com/local/writereview?placeid=ChIJnc25vr9ZrIkRylPnaT1GKYI" target="_blank" rel="noopener noreferrer" class="block text-white/84 hover:text-[#F59E0B] transition-colors">Leave a Google Review →</a>
+            <a href="https://wa.me/19847424111" target="_blank" rel="noopener noreferrer" class="block text-white/84 hover:text-[#F59E0B] transition-colors">WhatsApp Us →</a>
+            <a href="tel:+19847424111" class="block text-white/84 hover:text-[#F59E0B] transition-colors">Call Now →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-6 border-t border-white/10 text-sm text-white/65 flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between">
+        <div>© <span id="year"></span> Abernathy Plumbing Services Raleigh NC. All rights reserved.</div>
+        <div>Raleigh plumbing from Six Forks Rd.</div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="fixed bottom-5 right-5 z-[9999] flex flex-col gap-3">
+    <a href="tel:+19847424111" class="fab call bg-[#EA580C] text-white" aria-label="Call Abernathy Plumbing Services Raleigh NC">
+      <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.1 5.18 2 2 0 0 1 5.08 3h3a2 2 0 0 1 2 1.72c.12.89.32 1.77.6 2.61a2 2 0 0 1-.45 2.11L9.09 10.64a16 16 0 0 0 4.27 4.27l1.2-1.14a2 2 0 0 1 2.11-.45c.84.28 1.72.48 2.61.6A2 2 0 0 1 22 16.92Z"></path>
+      </svg>
+    </a>
+    <a href="https://wa.me/19847424111" target="_blank" rel="noopener noreferrer" class="fab wa bg-[#25D366] text-white" aria-label="WhatsApp Abernathy Plumbing Services Raleigh NC">
+      <svg viewBox="0 0 24 24" class="w-6 h-6" fill="currentColor" aria-hidden="true">
+        <path d="M20.52 3.48A11.8 11.8 0 0 0 12.06 0C5.5 0 .16 5.3.16 11.83c0 2.09.55 4.12 1.59 5.9L0 24l6.46-1.68a11.9 11.9 0 0 0 5.6 1.42h.01c6.56 0 11.9-5.3 11.9-11.83 0-3.17-1.24-6.14-3.45-8.43Zm-8.46 18.2h-.01a9.86 9.86 0 0 1-5.04-1.38l-.36-.21-3.84 1 1.02-3.74-.23-.37a9.74 9.74 0 0 1-1.5-5.17c0-5.38 4.42-9.76 9.85-9.76a9.75 9.75 0 0 1 6.95 2.87 9.68 9.68 0 0 1 2.88 6.88c0 5.39-4.42 9.78-9.72 9.78Zm5.63-7.2c-.31-.16-1.85-.91-2.13-1.01-.29-.11-.49-.16-.7.16-.2.31-.81 1.01-.99 1.22-.18.2-.36.23-.67.08-.31-.16-1.31-.48-2.49-1.53-.92-.82-1.54-1.84-1.72-2.15-.18-.31-.02-.48.13-.63.13-.13.31-.36.47-.54.16-.18.21-.31.31-.52.1-.2.05-.39-.03-.54-.08-.16-.7-1.68-.96-2.3-.25-.59-.51-.5-.7-.51h-.6c-.21 0-.54.08-.82.39-.28.31-1.06 1.04-1.06 2.54s1.09 2.94 1.24 3.14c.16.2 2.15 3.28 5.2 4.61.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.85-.75 2.11-1.48.26-.72.26-1.34.18-1.48-.08-.13-.28-.2-.59-.36Z"></path>
+      </svg>
+    </a>
+    <a href="sms:+19847424111" class="fab sms bg-[#2563EB] text-white" aria-label="Text Abernathy Plumbing Services Raleigh NC">
+      <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8Z"></path>
+        <path d="M8 10h8"></path>
+        <path d="M8 13h5"></path>
+      </svg>
+    </a>
+  </div>
+
+  <script>
+    const nav = document.getElementById('siteNav');
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const yearEl = document.getElementById('year');
+    const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+    const mobileLinks = Array.from(document.querySelectorAll('.mobile-link'));
+    const allAnchors = Array.from(document.querySelectorAll('a[href^="#"]'));
+
+    yearEl.textContent = new Date().getFullYear();
+
+    const toggleMenu = (open) => {
+      mobileMenu.classList.toggle('open', open);
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    };
+
+    menuButton.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMenu(!mobileMenu.classList.contains('open'));
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !menuButton.contains(e.target)) toggleMenu(false);
+    });
+
+    mobileMenu.addEventListener('click', (e) => e.stopPropagation());
+    mobileLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
+
+    const setActive = (id) => {
+      navLinks.forEach(link => {
+        const active = link.getAttribute('href') === `#${id}`;
+        link.classList.toggle('active', active);
+      });
+    };
+
+    const scrollSections = document.querySelectorAll('main section');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      });
+    }, { threshold: 0.12 });
+
+    scrollSections.forEach(section => {
+      section.classList.add('reveal');
+      revealObserver.observe(section);
+    });
+
+    const activeObserver = new IntersectionObserver((entries) => {
+      const visible = entries.filter(entry => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+      if (visible.length) setActive(visible[0].target.id);
+    }, { rootMargin: '-28% 0px -62% 0px', threshold: [0.1, 0.2, 0.3, 0.4, 0.5] });
+
+    ['services', 'why-us', 'reviews', 'areas', 'contact'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) activeObserver.observe(el);
+    });
+
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    if (window.scrollY > 60) nav.classList.add('scrolled');
+
+    allAnchors.forEach(anchor => {
+      anchor.addEventListener('click', () => {
+        if (mobileMenu.classList.contains('open')) toggleMenu(false);
+      });
+    });
+  </script>
+</body>
+</html>
